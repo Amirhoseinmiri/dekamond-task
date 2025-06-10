@@ -1,11 +1,10 @@
-// components/Input.tsx
 import { ComponentProps } from "react";
 import styles from "./Input.module.scss";
 import clsx from "clsx";
 type InputProps = ComponentProps<"input"> & {
   label?: string;
-  errorMessage?: string; // Custom error message
-  wrapperClassName?: string; // Optional wrapper class name
+  errorMessage?: string;
+  wrapperClassName?: string;
 };
 
 const Input = ({
@@ -25,11 +24,9 @@ const Input = ({
       )}
       <input
         id={id}
-        className={clsx(
-          styles.input,
-          className, // Allow custom className to be passed
-          { [styles.error]: errorMessage } // Apply error style if errorMessage is present
-        )}
+        className={clsx(styles.input, className, {
+          [styles.error]: errorMessage,
+        })}
         {...props}
       />
       {errorMessage && <span className={styles.error}>{errorMessage}</span>}

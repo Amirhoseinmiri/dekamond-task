@@ -1,6 +1,3 @@
-/* styles/MainPage.module.scss */
-
-/* Base Styles */
 .mainPage {
   display: flex;
   flex-direction: column;
@@ -9,7 +6,7 @@
   height: 100vh;
   font-size: 24px;
   text-align: center;
-  padding: 20px; /* Added padding for small devices */
+  padding: 20px;
   box-sizing: border-box;
 }
 
@@ -24,25 +21,24 @@
   }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .mainPage {
-    font-size: 20px; /* Slightly smaller font size for tablets */
-    height: auto; /* Allow height to adjust for content */
+    font-size: 20px;
+    height: auto;
   }
 
   .loginLink {
-    font-size: 18px; /* Slightly smaller font for mobile */
+    font-size: 18px;
   }
 }
 
 @media (max-width: 480px) {
   .mainPage {
-    font-size: 18px; /* Further reduce font size for small mobile devices */
+    font-size: 18px;
   }
 
   .loginLink {
-    font-size: 16px; /* Adjust link size for mobile */
+    font-size: 16px;
   }
 }
 

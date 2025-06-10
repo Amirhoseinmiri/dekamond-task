@@ -1,4 +1,3 @@
-// pages/index.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -11,14 +10,10 @@ const MainPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Check if user data exists in localStorage
-
     const userData = localStorage.getItem("user");
     if (userData) {
-      // If user data exists, redirect to dashboard
       router.push("/dashboard");
     } else {
-      // If no user data, set loading to false
       setLoading(false);
     }
   }, [router]);
